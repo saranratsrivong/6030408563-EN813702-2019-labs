@@ -1,7 +1,4 @@
-import java.util.*
-
 fun main(args: Array<String>) {
-
     var fortune: String
     for (i in 1..10){
         fortune = getFortune(getBirthday())
@@ -9,15 +6,11 @@ fun main(args: Array<String>) {
         if (fortune.contains("Take it easy"))break;
     }
 }
-
 fun getBirthday() : Int?{
     print("Enter your birthday: ")
     val birthday = readLine()!!.toIntOrNull()
-
     return birthday
-
 }
-
 fun getFortune(birthday : Int?) : String {
     val modDay : Int? = birthday?.rem(7)
     val luck = listOf("You will have a great day!","Things will go well for you today.",
@@ -41,5 +34,4 @@ fun getFortune(birthday : Int?) : String {
     }else{
         return "Please enter a valid birthday (1-31)"
     }
-
 }

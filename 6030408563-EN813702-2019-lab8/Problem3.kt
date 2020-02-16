@@ -4,9 +4,6 @@ fun main(args: Array<String>) {
     println("canAddFish(9.0, listOf(1,1,3),3) is ${canAddFish(9.0, listOf(1,1,3),3)}")
     println("canAddFish(9.0, listOf(),7,true) is ${canAddFish(9.0, listOf(),7,true)}")
 }
-
-
-
 fun canAddFish(tankSize : Double, currentFish : List<Int>, fishSize : Int = 2, hasDecorations : Boolean = true):Boolean {
     var allFish = currentFish.sum() + fishSize
     val tankSize = if (hasDecorations != true) tankSize else tankSize*0.8
